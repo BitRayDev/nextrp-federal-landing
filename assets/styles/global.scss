@@ -1,0 +1,48 @@
+@import "../fonts/OpenSans/stylesheet.css";
+@import "../fonts/Oxanium/stylesheet.css";
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans";
+}
+
+ul {
+  padding-left: 1vw;
+
+  li::marker {
+    content: "▸";
+  }
+}
+
+
+// ==================== TRANSITIONS ==============
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: transform 0.25s;
+}
+.slide-left-enter {
+  transform: translateX(100vw);
+}
+.slide-left-leave-to {
+  transform: translateX(-100vw);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 0.25s;
+}
+.slide-right-enter {
+  transform: translateX(-100vw);
+}
+.slide-right-leave-to {
+  transform: translateX(100vw);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
